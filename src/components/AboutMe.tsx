@@ -13,7 +13,7 @@ import './AboutMe.css';
 
 const AboutMe: React.FC = () => {
     return (
-        <div>
+        <Box sx={{bgcolor:"" }}>
             <img src="images/profile-pic.jpg" width={250} alt="prof-pic"/>
             <Box sx={{width: 300, m: '0 auto'}}>
                 <h2>Nhi Cung</h2>
@@ -39,7 +39,7 @@ const AboutMe: React.FC = () => {
                     <p>https://github.com/nhicung</p>
                 </Stack>
             </Box>
-        </div>
+        </Box>
     )
 };
 

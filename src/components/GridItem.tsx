@@ -18,7 +18,7 @@ const GridItem:React.FC<Item> = props => {
 
     return (
         <div>
-            <Container maxWidth="md" sx={{ mb: 2, ml: 0, mr: 0, p: 4, }}>
+            <Container sx={{ mb: 2, ml: 0, mr: 0, p: 4, }} className="grid-container">
                 <Grid container sx={{alignItems:'center' }} spacing={2}>
                     <Grid
                         item

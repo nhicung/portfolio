@@ -4,4 +4,6 @@
 .about-me-wrapper {
     box-shadow: none !important;
     padding-top: 85px !important;
+    /* background-color: #FBE8A6 !important; */
+    height: 100vh !important
 }

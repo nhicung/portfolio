@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+.grid-container {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+}
+.about-me-container {
+  position: fixed;
+  width: 100%;
+}
+.work-project-container {
+  left: 25%;
+  position: relative;
+}
+.work-project-header {
+  position: fixed !important;
+  width: 75% !important;
+}
