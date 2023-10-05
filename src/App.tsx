@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 
@@ -19,10 +20,10 @@ const Item = styled(Paper)(({ theme }) => ({
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#fff',
+      main: '#4E4E50',
     },
     secondary: {
-      main: '#ec407a',
+      main: '#950740',
     },
   },
   typography: {
@@ -30,7 +31,12 @@ const theme = createTheme({
       color: ""
     },
     h1: {
-      color: ""
+      color: "",
+      fontSize: '50px'
+    },
+    h2: {
+      color: "",
+      fontSize: '36px'
     },
     button: {
       color: ""
@@ -48,7 +54,7 @@ function App() {
         <Grid item xs={3} className="about-me-container">
           <Item className="about-me-wrapper"><AboutMe/></Item>
         </Grid>
-        <Grid item xs={9} className="work-project-container">
+        <Grid item xs={9} sx={{left: '25%', position: 'relative', borderLeft: 'solid #950740'}}>
           <Item>
            <WorkAndProject/>
             {/* <section className="s1">

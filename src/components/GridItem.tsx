@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 interface Item {
     id: string;
@@ -12,14 +13,19 @@ interface Item {
     company: string;
     description: string;
     webURL: string;
+    gitURL: string;
+    backgroundColor: string;
+    textColor: string
 } 
 
 const GridItem:React.FC<Item> = props => {
+    const [hoverColor, setHoverColor] = useState("");
+    const [isShown, setIsShown] = useState(false);
 
     return (
         <div>
-            <Container sx={{ mb: 2, ml: 0, mr: 0, p: 4, }} className="grid-container">
-                <Grid container sx={{alignItems:'center' }} spacing={2}>
+            <Container sx={{ mb: 0, ml: 0, mr: 0, p: 0, bgcolor:props.backgroundColor }} className="grid-container">
+                {/* <Grid container sx={{alignItems:'center' }} spacing={2}>
                     <Grid
                         item
                         xs={12}
@@ -57,7 +63,108 @@ const GridItem:React.FC<Item> = props => {
                             {props.webURL}
                         </Typography>
                     </Grid>
-                </Grid>
+                </Grid> */}
+                <Box
+                    sx={{ 
+                        zIndex:200, 
+                        alignItems: 'center',
+                        display: 'flex',
+                    }}
+                    onMouseEnter={() => {
+                        setHoverColor(props.textColor);
+                        // setHoverImageStyle(imageDetail);
+                        setIsShown(true);
+                    }}
+                    onMouseLeave={() =>{ 
+                        setHoverColor("white");
+                        // setHoverImageStyle(imageShorten);
+                        setIsShown(false);
+                    }}
+                >
+                    <Box className="role" sx={{color:hoverColor}}>
+                        <Box sx={{ 
+                            typography: 'h1', 
+                            fontWeight: 'bold', 
+                            textAlign: 'left' 
+                        }}>
+                            {props.name}
+                        </Box>
+                        <Box sx={{ 
+                            typography:'h4', 
+                            fontSize: 20, 
+                            textAlign: 'left' 
+                        }}>
+                            {props.company}
+                        </Box>
+                        <Box sx={{
+                            typography:'p', 
+                            textAlign:'left', 
+                            display:isShown? 'flex' : 'none',
+                            opacity: isShown? 1 : 0,
+                            transition: 'opacity 1s, display 1s',
+                            transitionBehavior:' allow-discrete',
+                            whiteSpace: 'normal',
+                            width: '500px',
+                        }}>
+                            {props.description}
+                        </Box>
+                        <Box sx={{display:'flex', justifyContent:'space-between'}}>
+                            <Button 
+                                color="secondary"
+                                sx={{
+                                    mt: 2,
+                                    width:'45%',
+                                    transition: 'opacity 1s ease-in',
+                                    display:isShown? 'flex' : 'none',
+                                    opacity: isShown? 1 : 0,
+                                }} 
+                                variant="contained"
+                                href={props.webURL}
+                                target="_blank"
+                            >
+                                    Show Site
+                            </Button>
+                            {props.gitURL === '' ?
+                                <div></div>
+                            :
+                                <Button 
+                                    color="secondary"
+                                    sx={{
+                                        mt: 2,
+                                        width:'45%',
+                                        transition: 'opacity 1s ease-in',
+                                        display:isShown? 'flex' : 'none',
+                                        opacity: isShown? 1 : 0,
+                                    }} 
+                                    variant="contained"
+                                    href={props.gitURL}
+                                    target="_blank"
+                                >
+                                        Show Git
+                                </Button>
+                            }
+                        </Box>
+                    </Box>
+                    <Box
+                        sx={{
+                            display:'flex',
+                            alignItems:'center',
+                            position: 'relative',
+                            transition:' transform 1s ease',
+                            opacity: isShown ? 1 : 0.5,
+                            transform: isShown ? 'scale(0.6) translateX(500px)' : 'scale(1) translateX(0)',
+                        }}
+                    >
+                            <img
+                                width='700px'
+                                src={props.img}
+                                alt={props.name}
+                            />
+                    </Box>
+                </Box>
+                <div className="bottom-line">
+                <hr/>
+            </div>
             </Container>
         </div>
     );

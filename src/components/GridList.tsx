@@ -14,6 +14,9 @@ interface ItemList {
         company: string;
         description: string;
         webURL: string;
+        gitURL: string;
+        backgroundColor: string;
+        textColor: string;
     }[];
 } 
 
@@ -31,6 +34,9 @@ const Work: React.FC<ItemList> = props => {
                             company={item.company}
                             description={item.description}
                             webURL={item.webURL}
+                            gitURL={item.gitURL}
+                            textColor={item.textColor}
+                            backgroundColor={item.backgroundColor}
                         />
                     ))}
                 </Grid>

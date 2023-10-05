@@ -28,7 +28,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 0 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -52,7 +52,15 @@ export default function WorkAndProject() {
 
   return (
         <Box sx={{ bgcolor:"" }}>
-          <AppBar position="static" className="work-project-header">
+          <AppBar 
+            position="static" 
+            sx={{
+              background:'transparent', 
+              boxShadow: 'none',
+              position: 'fixed',
+              width: '75%'
+            }} 
+          >
               <Tabs
               value={value}
               onChange={handleChange}
@@ -65,7 +73,7 @@ export default function WorkAndProject() {
               <Tab label="Projects" {...a11yProps(1)} />
               </Tabs>
           </AppBar>
-          <Box sx={{bgcolor:"" }}>
+          <Box sx={{ p: 0}}>
               <TabPanel value={value} index={0}>
                   <Work items={workData}/>
               </TabPanel>

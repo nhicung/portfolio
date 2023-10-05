@@ -14,28 +14,28 @@ import './AboutMe.css';
 const AboutMe: React.FC = () => {
     return (
         <Box sx={{bgcolor:"" }}>
-            <img src="images/profile-pic.jpg" width={250} alt="prof-pic"/>
+            <img src="images/profile-pic.jpg" width={250} alt="prof-pic" className="profile-pic"/>
             <Box sx={{width: 300, m: '0 auto'}}>
                 <h2>Nhi Cung</h2>
                 <p className="about-me-summary">I'm a creative and detail-oriented frontend developer with a passion for crafting immersive and visually stunning web applications. My journey in the world of web development began with a fascination for how technology can enhance user experiences and make the internet a more accessible and engaging place.</p>
                 <Stack spacing={2} direction="row" alignItems="center">
-                    <LocationOnIcon />
+                    <LocationOnIcon color="secondary" />
                     <p>Los Angeles, CA</p>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
-                    <CallIcon />
+                    <CallIcon color="secondary" />
                     <p>310-237-2969</p>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
-                    <EmailIcon />
+                    <EmailIcon color="secondary" />
                     <p>cunghonglinhnhi@gmail.com</p>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
-                    <LinkedInIcon />
+                    <LinkedInIcon color="secondary" />
                     <p>https://www.linkedin.com/in/nhicung/</p>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
-                    <GitHubIcon />
+                    <GitHubIcon color="secondary" />
                     <p>https://github.com/nhicung</p>
                 </Stack>
             </Box>

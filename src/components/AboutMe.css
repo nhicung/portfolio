@@ -4,6 +4,16 @@
 .about-me-wrapper {
     box-shadow: none !important;
     padding-top: 85px !important;
-    /* background-color: #FBE8A6 !important; */
-    height: 100vh !important
+    background-color: #1A1A1D !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+}
+p {
+    color: #fff;
+}
+h2 {
+    color: #C3073F
+}
+.profile-pic {
+    border-radius: 50%;
 }

@@ -38,11 +38,16 @@ html{
   position: fixed;
   width: 100%;
 }
-.work-project-container {
-  left: 25%;
-  position: relative;
+.role {
+  position: absolute;
+  left: 130px;
+  white-space: pre;
+  z-index: 100;
 }
-.work-project-header {
-  position: fixed !important;
-  width: 75% !important;
+.bottom-line {
+  position: absolute;
+  width: 45%;
+  top: 65%;
+  right: 0;
+  color: #950740
 }
