@@ -22,6 +22,7 @@ html{
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 .grid-container {
@@ -32,7 +33,6 @@ html{
   align-items: center;
   text-align: center;
   flex-direction: column;
-
 }
 .about-me-container {
   position: fixed;
@@ -47,7 +47,7 @@ html{
 .bottom-line {
   position: absolute;
   width: 45%;
-  top: 65%;
+  bottom: 48px;
   right: 0;
-  color: #950740
+  border-bottom: 2px solid #950740;
 }

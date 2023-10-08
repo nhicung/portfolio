@@ -1,5 +1,6 @@
 .about-me-summary {
     text-align: justify;
+    padding: 10px 0
 }
 .about-me-wrapper {
     box-shadow: none !important;
@@ -8,7 +9,7 @@
     height: 100vh !important;
     border-radius: 0 !important;
 }
-p {
+p , a{
     color: #fff;
 }
 h2 {
@@ -17,3 +18,18 @@ h2 {
 .profile-pic {
     border-radius: 50%;
 }
+
+.about-me-wrapper-mobile {
+    box-shadow: none !important;
+    padding-top: 140px !important;
+    background-color: #1A1A1D !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    scroll-snap-align: start;
+}
+
+/* @media (max-width: 600px) {
+    .about-me-wrapper {
+        padding-top: 85px !important;
+    }
+} */

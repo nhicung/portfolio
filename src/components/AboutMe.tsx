@@ -28,15 +28,15 @@ const AboutMe: React.FC = () => {
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
                     <EmailIcon color="secondary" />
-                    <p>cunghonglinhnhi@gmail.com</p>
+                    <a href='mailto:cunghonglinhnhi@gmail.com?subject="subject text"' target='blank'>cunghonglinhnhi@gmail.com</a>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
                     <LinkedInIcon color="secondary" />
-                    <p>https://www.linkedin.com/in/nhicung/</p>
+                    <a href= 'https://www.linkedin.com/in/nhicung/' target='blank'>https://www.linkedin.com/in/nhicung/</a>
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
                     <GitHubIcon color="secondary" />
-                    <p>https://github.com/nhicung</p>
+                    <a href= 'https://www.linkedin.com/in/nhicung/' target='blank'>https://github.com/nhicung</a>
                 </Stack>
             </Box>
         </Box>

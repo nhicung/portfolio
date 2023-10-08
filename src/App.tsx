@@ -1,21 +1,11 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 
-import AboutMe from './components/AboutMe';
-import WorkAndProject from './WorkAndProject';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+import DesktopVersion from './pages/desktop/DesktopVersion';
+import MobileVersion from './pages/mobile/MobileVersion'
 
 const theme = createTheme({
   palette: {
@@ -48,39 +38,16 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
-       <Box sx={{ flexGrow: 1 }}>
-      <Grid container>
-        <Grid item xs={3} className="about-me-container">
-          <Item className="about-me-wrapper"><AboutMe/></Item>
-        </Grid>
-        <Grid item xs={9} sx={{left: '25%', position: 'relative', borderLeft: 'solid #950740'}}>
-          <Item>
-           <WorkAndProject/>
-            {/* <section className="s1">
-                <h1>Section 1</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde molestiae explicabo vel omnis exercitationem ipsam suscipit amet, at maxime possimus, dolore temporibus sequi eos! Eveniet dolor molestias blanditiis, commodi vel fugiat non ipsa, laborum quod assumenda placeat eos asperiores sapiente, quisquam reprehenderit nam explicabo magnam atque! Doloribus, itaque voluptas?</p>
-            </section>
-
-            <section className="s2">
-                <h1>Section 3</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde molestiae explicabo vel omnis exercitationem ipsam suscipit amet, at maxime possimus, dolore temporibus sequi eos! Eveniet dolor molestias blanditiis, commodi vel fugiat non ipsa, laborum quod assumenda placeat eos asperiores sapiente, quisquam reprehenderit nam explicabo magnam atque! Doloribus, itaque voluptas?</p>
-            </section>
-
-            <section className="s3">
-                <h1>Section 3</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde molestiae explicabo vel omnis exercitationem ipsam suscipit amet, at maxime possimus, dolore temporibus sequi eos! Eveniet dolor molestias blanditiis, commodi vel fugiat non ipsa, laborum quod assumenda placeat eos asperiores sapiente, quisquam reprehenderit nam explicabo magnam atque! Doloribus, itaque voluptas?</p>
-            </section>
-
-            <section className="s4">
-                <h1>Section 4</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde molestiae explicabo vel omnis exercitationem ipsam suscipit amet, at maxime possimus, dolore temporibus sequi eos! Eveniet dolor molestias blanditiis, commodi vel fugiat non ipsa, laborum quod assumenda placeat eos asperiores sapiente, quisquam reprehenderit nam explicabo magnam atque! Doloribus, itaque voluptas?</p>
-            </section> */}
-          </Item>
-        </Grid>
-      </Grid>
-    </Box>
-    </div>
+      <div className="App">
+        {/* Desktop version */}
+        <Box sx={{ flexGrow: 1, display:['none', 'flex']}}>
+          <DesktopVersion/>
+        </Box>
+        {/* Mobile version */}
+        <Box sx={{ flexGrow: 1, display:['flex', 'none'] }}>
+          <MobileVersion/>
+        </Box>
+      </div>
     </ThemeProvider>
   );
 }
