@@ -45,7 +45,7 @@ const GridItem:React.FC<Item> = props => {
                     position: 'absolute',
                     top: 0,
                     width:'100%',
-                    p: '170px 0',
+                    p: '150px 0',
                 }}>
                     <Box
                         sx={{
@@ -96,7 +96,7 @@ const GridItem:React.FC<Item> = props => {
                         }}>
                             {props.description}
                         </Box>
-                        <Box sx={{display:'flex', flexDirection:'column'}}>
+                        <Box sx={{display:'flex', justifyContent:'space-between'}}>
                             <Button 
                                 color="secondary"
                                 size="large"
