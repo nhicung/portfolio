@@ -36,7 +36,7 @@ const AboutMe: React.FC = () => {
                 </Stack>
                 <Stack spacing={2} direction="row" alignItems="center">
                     <GitHubIcon color="secondary" />
-                    <a href= 'https://www.linkedin.com/in/nhicung/' target='blank'>https://github.com/nhicung</a>
+                    <a href= 'https://github.com/nhicung' target='blank'>https://github.com/nhicung</a>
                 </Stack>
             </Box>
         </Box>
