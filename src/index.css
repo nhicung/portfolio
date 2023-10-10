@@ -40,7 +40,7 @@ html{
 }
 .role {
   position: absolute;
-  left: 130px;
+  left: 100px;
   white-space: pre;
   z-index: 100;
 }
@@ -50,4 +50,8 @@ html{
   bottom: 48px;
   right: 0;
   border-bottom: 2px solid #950740;
+}
+.page-nav .MuiDivider-wrapper {
+  display: flex !important;
+  flex-direction: column;
 }
