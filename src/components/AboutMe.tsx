@@ -14,7 +14,7 @@ import './AboutMe.css';
 const AboutMe: React.FC = () => {
     return (
         <Box sx={{bgcolor:"" }}>
-            <img src="images/profile-pic.jpg" width={250} alt="prof-pic" className="profile-pic"/>
+            <img src="images/profile-pic.png" width={250} alt="prof-pic" className="profile-pic"/>
             <Box sx={{width: 300, m: '0 auto'}}>
                 <h2>Nhi Cung</h2>
                 <p className="about-me-summary">I'm a creative and detail-oriented frontend developer with a passion for crafting immersive and visually stunning web applications. My journey in the world of web development began with a fascination for how technology can enhance user experiences and make the internet a more accessible and engaging place.</p>
