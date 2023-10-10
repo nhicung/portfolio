@@ -148,7 +148,7 @@ const GridItem: React.FC<Item> = (props) => {
                     href={props.webURL}
                     target="_blank"
                   >
-                    Show Site
+                    View Site
                   </Button>
                   {props.gitURL === "" ? (
                     <div></div>
@@ -166,7 +166,7 @@ const GridItem: React.FC<Item> = (props) => {
                       href={props.gitURL}
                       target="_blank"
                     >
-                      Show Git
+                      View Git
                     </Button>
                   )}
                 </Box>
