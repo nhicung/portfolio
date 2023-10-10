@@ -6,7 +6,7 @@ const jobs = [
         time: 'Jun \'22 - Sep \'23 ',
         company: 'Reggie Pet, Inc.',
         description:
-            'Oversee technical process from ideation, mockup design and development for the company’s D2C e-commerce web application, utilizing React and JavaScript.',
+            'Managed technical process from ideation, mockup design and development for the company’s D2C e-commerce web application, utilizing React and JavaScript.',
         webURL: 'https://reggie.com/',
         gitURL: '',
         backgroundColor:"#1A1A1D",
