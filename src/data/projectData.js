@@ -32,7 +32,7 @@ const projects = [
         time: 'with React, JavaScript, MaterialUI',
         company: 'My Reading Collection',
         description:
-            'Developed a single-page application to showcase my favorite readings.',
+            'Developed a single-page application to keep track of my favorite readings.',
         webURL: '',
         gitURL: 'https://github.com/nhicung/my-read',
         backgroundColor:"#6F2232",
